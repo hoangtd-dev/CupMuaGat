@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+
+.material-symbols-outlined {
+  color: $text-black;
+}
+
+.dark-theme {
+  .material-symbols-outlined {
+    color: $text-white;
+  }
+}

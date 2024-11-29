@@ -1,0 +1,24 @@
+// Color
+$gray: #7878781a;
+$text-black: #0f1012;
+$text-white: white;
+
+$light_bg: $text-white;
+$light_text: $text-black;
+
+$dark_grey_bg: #121212;
+$dark_surface_1: rgba(255, 255, 255, 5%);
+$dark_surface_2: rgba(255, 255, 255, 7%);
+$dark_bg_text: rgba(255, 255, 255, 87%);
+$dark_surface_text: rgba(255, 255, 255, 60%);
+$dark_disabled_text: rgba(255, 255, 255, 38%);
+
+// Font Variables
+$primary-font: "Roboto", sans-serif;
+
+// Typography Variables
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+// Z-Index Variables
+$z-index-navbar: 1000;

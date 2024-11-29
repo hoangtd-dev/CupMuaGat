@@ -1,0 +1,22 @@
+@import "../abstracts/variables";
+
+@mixin override_card($padding, $border-radius) {
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.dark-theme {
+  .card {
+    color: $dark_bg_text;
+    background-color: $dark_surface_1;
+
+    .card-description {
+      color: $dark_surface_text;
+    }
+  }
+}

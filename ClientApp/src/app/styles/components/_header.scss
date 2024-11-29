@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+.dark-theme {
+  header {
+    nav {
+      .icon-container {
+        span {
+          background: rgba(255, 255, 255, 0.075) !important;
+        }
+      }
+
+      .navigation-bar {
+        background: rgba(255, 255, 255, 0.075) !important;
+      }
+
+      ul {
+        &:hover li:not(:hover) .link {
+          color: $dark_disabled_text !important;
+        }
+      }
+    }
+  }
+}

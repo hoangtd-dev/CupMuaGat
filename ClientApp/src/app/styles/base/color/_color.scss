@@ -1,0 +1,35 @@
+@import "./color-palette/primary-theme.scss";
+@import "./color-palette/dark-theme.scss";
+
+@function mapping-color($color-palette) {
+  @return (
+    primary: map-get($color-palette, blue),
+    // warning: map-get($color-palette, blue),
+    // success: map-get($color-palette, blue),
+    // error: map-get($color-palette, blue)
+  );
+}
+
+$color-themes: (
+  primary-theme: mapping-color($primary-theme),
+  dark-theme: mapping-color($dark-theme),
+);
+
+@each $theme-name, $theme-value in $color-themes {
+  .#{$theme-name} {
+    @each $colors-map-key, $colors-map in $theme-value {
+      @each $shade, $color in $colors-map {
+        @if $shade != contrast {
+          .bg-#{$colors-map-key}-#{$shade} {
+            background-color: $color;
+            color: map-get(map-get($colors-map, contrast), $shade);
+          }
+
+          .text-#{$colors-map-key}-#{$shade} {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}

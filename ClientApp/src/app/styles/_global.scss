@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+// Width
+$width_dimension: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+@each $key, $value in $width_dimension {
+  .w-#{$key} {
+    width: $value;
+  }
+}
+
+// Additional Utility Classes
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// border radius
+.circle {
+  border-radius: 56px;
+}
+
+.rounded-sm {
+  border-radius: 8px;
+}
+
+// visible
+.hidden {
+  visibility: hidden;
+}
+
+// padding
+$paddings_and_margins: (0, 4, 8, 12, 16, 20);
+
+@each $size in $paddings_and_margins {
+  .p-#{$size} {
+    padding: #{$size}px;
+  }
+
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+
+  .pr-#{$size} {
+    padding-right: #{$size}px;
+  }
+
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+
+  .mt-#{$size} {
+    margin-top: #{$size}px;
+  }
+
+  .mb-#{$size} {
+    margin-bottom: #{$size}px;
+  }
+
+  .ml-#{$size} {
+    margin-left: #{$size}px;
+  }
+
+  .mr-#{$size} {
+    margin-right: #{$size}px;
+  }
+}

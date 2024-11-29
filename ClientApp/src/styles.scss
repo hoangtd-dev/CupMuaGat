@@ -1,9 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@import "./app/styles/abstracts/index";
+@import "./app/styles/base/index";
+@import "./app/styles//components/index";
 
-  color: #0f1012;
+@import "./app/styles/global";
 
-  font-family: Arial, Helvetica, sans-serif;
-}
+// Material
+@import "material-symbols";
