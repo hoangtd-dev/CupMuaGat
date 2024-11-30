@@ -9,6 +9,7 @@ header {
 
     .icon-container {
       cursor: pointer;
+      user-select: none;
 
       span {
         background: rgba(0, 0, 0, 0.075);

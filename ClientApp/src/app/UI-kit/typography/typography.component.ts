@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './typography.component.scss',
 })
 export class TypographyComponent {
-  public themeName = 'primary-theme';
   public shades = [
     'primary-100',
     'primary-200',

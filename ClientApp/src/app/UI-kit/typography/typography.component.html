@@ -23,10 +23,10 @@
 
   @for (shade of shades; track shade) {
   <div class="box text-center" [class]="'text-' + shade">
-    <p>Paragraph</p>
+    <p>Paragraph {{ shade }}</p>
   </div>
   <div class="box text-center" [class]="'bg-' + shade">
-    <p>Paragraph</p>
+    <p>Paragraph {{ shade }}</p>
   </div>
   }
   <div class="box text-center"><p>Hi This is black theme</p></div>

@@ -1,7 +1,15 @@
 <header class="w-100 p-20">
   <nav>
-    <div class="icon-container" [ngClass]="{ hidden: isMenuOpen }">
+    <div
+      class="icon-container"
+      [ngClass]="{ hidden: isMenuOpen }"
+      (click)="updateTheme()"
+    >
+      @if (themeMode === ThemeModeEnum.Light) {
       <span class="material-symbols-outlined circle p-8"> light_mode </span>
+      } @else {
+      <span class="material-symbols-outlined circle p-8"> dark_mode </span>
+      }
     </div>
 
     <div #navigation class="navigation-bar rounded-sm">

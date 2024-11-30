@@ -10,7 +10,13 @@
   border-radius: 6px;
 }
 
-.dark-theme {
+.light-mode {
+  .card {
+    border: 1px solid $text-black;
+  }
+}
+
+.dark-mode {
   .card {
     color: $dark_bg_text;
     background-color: $dark_surface_1;
