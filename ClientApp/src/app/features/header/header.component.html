@@ -1,10 +1,6 @@
 <header class="w-100 p-20">
   <nav>
-    <div
-      class="icon-container"
-      [ngClass]="{ hidden: isMenuOpen }"
-      (click)="updateTheme()"
-    >
+    <div class="icon-container" (click)="updateTheme()">
       @if (themeMode === ThemeModeEnum.Light) {
       <span class="material-symbols-outlined circle p-8"> light_mode </span>
       } @else {
@@ -14,24 +10,26 @@
 
     <div #navigation class="navigation-bar rounded-sm">
       <div class="navigation-header p-20">
-        <div style="width: 40px"></div>
-        <div class="title">Navigation</div>
         <div class="icon-container" (click)="triggerMenu()">
-          <span class="material-symbols-outlined rounded-sm p-8"> close </span>
+          <span class="material-symbols-outlined rounded-sm p-8">
+            keyboard_backspace
+          </span>
         </div>
       </div>
 
       <ul>
-        <li><a class="link" href="#">Cúp Mùa Gặt</a></li>
-        <li><a class="link" href="#">Giải Vòng Tròn</a></li>
+        <li>
+          <span class="material-symbols-outlined menu-icon"> trophy </span>
+          <a class="link" href="#">Cúp Mùa Gặt</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined menu-icon"> trophy </span>
+          <a class="link" href="#">Giải Vòng Tròn</a>
+        </li>
       </ul>
     </div>
 
-    <div
-      class="icon-container menu-icon"
-      [ngClass]="{ hidden: isMenuOpen }"
-      (click)="triggerMenu()"
-    >
+    <div class="icon-container menu-icon" (click)="triggerMenu()">
       <span class="material-symbols-outlined rounded-sm p-8"> menu </span>
     </div>
   </nav>

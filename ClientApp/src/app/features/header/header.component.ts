@@ -1,6 +1,6 @@
 import { ThemeModeEnum } from './../../core/enums/themes.enum';
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../../core/services/themes.service';
 import { BaseComponent } from '../../core/components/base-component/base-component.component';
 
@@ -15,8 +15,6 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   public readonly ThemeModeEnum = ThemeModeEnum;
   public isMenuOpen = false;
   public themeMode!: ThemeModeEnum;
-
-  @ViewChild('navigation') navigationEl!: ElementRef<HTMLDivElement>;
 
   constructor(private readonly _themesService: ThemesService) {
     super();
@@ -38,8 +36,8 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
 
     this.isMenuOpen
-      ? this.navigationEl.nativeElement.classList.add('open')
-      : this.navigationEl.nativeElement.classList.remove('open');
+      ? document.body.classList.add('menu-open')
+      : document.body.classList.remove('menu-open');
   }
 
   public updateTheme(): void {

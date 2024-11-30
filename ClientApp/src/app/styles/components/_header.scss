@@ -1,23 +1,170 @@
-@import "../abstracts/variables";
+@import "../../styles/abstracts/variables";
+
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .icon-container {
+      cursor: pointer;
+      user-select: none;
+
+      span {
+        background: rgba(0, 0, 0, 0.075);
+      }
+    }
+
+    .navigation-bar {
+      visibility: hidden; // Use visibility to access to element
+      background: rgba(0, 0, 0, 0.075);
+
+      .navigation-header {
+        display: none;
+      }
+
+      ul {
+        display: none; // For responsive (hidden visibility will break UI)
+
+        text-align: center;
+
+        li {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+
+          .menu-icon {
+            display: none;
+          }
+
+          .link {
+            font-size: 1.1rem;
+          }
+        }
+
+        &:hover li:not(:hover) .link {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.menu-open {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    .navigation-bar {
+      width: 80%;
+      visibility: visible;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 2;
+      background: $text-white;
+      border-radius: 0;
+      box-shadow: 0px 0px 10px $text-black;
+
+      .navigation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      ul {
+        display: block;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          &:hover {
+            background-color: $light_hover_background;
+          }
+
+          .menu-icon {
+            display: inline;
+          }
+
+          .link {
+            text-align: left;
+            padding: 20px 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    nav::after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      background: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+}
 
 .dark-mode {
   header {
     nav {
       .icon-container {
         span {
-          background: rgba(255, 255, 255, 0.075) !important;
+          background: $dark_surface_2;
         }
       }
 
       .navigation-bar {
-        background: rgba(255, 255, 255, 0.075) !important;
-      }
+        background: $dark_grey_bg;
 
-      ul {
-        &:hover li:not(:hover) .link {
-          color: $dark_disabled_text !important;
+        ul {
+          li:hover {
+            background: $dark_surface_2;
+          }
+
+          &:hover li:not(:hover) .link {
+            color: $dark_disabled_text;
+          }
         }
       }
+    }
+
+    nav::after {
+      background: rgba($color: #fff, $alpha: 0.2);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    nav {
+      justify-content: center;
+      .menu-icon {
+        display: none;
+      }
+
+      .navigation-bar {
+        visibility: visible;
+
+        ul {
+          display: flex; // Change display style
+        }
+      }
+    }
+  }
+
+  .dark-mode {
+    header nav .navigation-bar {
+      background: $dark_surface_2;
     }
   }
 }
