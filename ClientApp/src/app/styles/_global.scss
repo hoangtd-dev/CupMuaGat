@@ -22,6 +22,10 @@ $width_dimension: (
 }
 
 // Additional Utility Classes
+.text-bold {
+  font-weight: 600;
+}
+
 .text-center {
   text-align: center;
 }
@@ -43,13 +47,27 @@ $width_dimension: (
   border-radius: 8px;
 }
 
+.rounded-lg {
+  border-radius: 12px;
+}
+
 // visible
 .hidden {
   visibility: hidden;
 }
 
+// container
+.container {
+  width: 90%;
+  max-width: 768px;
+
+  &.center {
+    margin: 0 auto;
+  }
+}
+
 // padding
-$paddings_and_margins: (0, 4, 8, 12, 16, 20);
+$paddings_and_margins: (0, 4, 8, 16, 20, 32, 80, 100);
 
 @each $size in $paddings_and_margins {
   .p-#{$size} {

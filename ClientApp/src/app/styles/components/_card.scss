@@ -7,12 +7,16 @@
 
 .card {
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 16px;
 }
 
 .light-mode {
   .card {
-    border: 1px solid $text-black;
+    background-color: $text-white;
+
+    .sub-card {
+      background: rgba(0, 0, 0, 0.075);
+    }
   }
 }
 
@@ -23,6 +27,15 @@
 
     .card-description {
       color: $dark_surface_text;
+    }
+
+    .sub-card {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .mat-mdc-cell,
+    .mat-mdc-header-cell {
+      color: $dark_bg_text;
     }
   }
 }

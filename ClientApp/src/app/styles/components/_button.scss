@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  &.btn-stroked {
+    background: rgba(255, 255, 255, 15%);
+  }
+}

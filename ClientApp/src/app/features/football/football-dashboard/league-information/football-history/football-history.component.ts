@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-football-history',
+  standalone: true,
+  imports: [],
+  templateUrl: './football-history.component.html',
+  styleUrl: './football-history.component.scss',
+})
+export class FootballHistoryComponent {
+  public histories: any[] = [
+    {
+      home: 'Đội Trẻ',
+      homeScore: 4,
+      away: 'Đội Già',
+      awayScore: 4,
+    },
+    {
+      home: 'Đội Trẻ',
+      homeScore: 4,
+      away: 'Đội Già',
+      awayScore: 4,
+    },
+  ];
+}

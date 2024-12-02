@@ -1,0 +1,43 @@
+@import "../../../../styles/abstracts/variables";
+@import "../../../../styles/base/color/color";
+
+.upcoming-match-title p {
+  font-size: 1.5rem;
+}
+
+.upcoming-match-container {
+  color: $text-white;
+  background: linear-gradient(
+    146deg,
+    color(primary, 700) 0%,
+    color(primary, 600) 100%
+  );
+
+  .title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0px;
+    letter-spacing: 1.5px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  .detail-btn {
+    color: $text-white;
+
+    .btn-icon {
+      margin-left: 8px;
+
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

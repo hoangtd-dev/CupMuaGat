@@ -1,0 +1,11 @@
+<div class="football-history-container">
+  @for (history of histories; track $index) {
+  <div class="history-item">
+    <div class="home">{{ history.home }}</div>
+    <div class="score sub-card">
+      {{ history.homeScore }} : {{ history.awayScore }}
+    </div>
+    <div class="away">{{ history.away }}</div>
+  </div>
+  }
+</div>

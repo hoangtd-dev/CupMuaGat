@@ -13,6 +13,13 @@ $color-themes: (
   primary-theme: mapping-color($primary-theme),
 );
 
+@function color($color-key, $shade) {
+  @return map-get(
+    map-get(map-get($color-themes, "primary-theme"), $color-key),
+    $shade
+  );
+}
+
 @each $theme-name, $theme-value in $color-themes {
   .#{$theme-name} {
     @each $colors-map-key, $colors-map in $theme-value {

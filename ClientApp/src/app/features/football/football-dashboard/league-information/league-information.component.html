@@ -1,0 +1,24 @@
+<div class="league-information-title">
+  <p>Thông tin mùa giải</p>
+</div>
+
+<ul class="league-tabs">
+  @for (tab of tabs; track $index) {
+  <li
+    class="tab"
+    [ngClass]="{ active: currentTabId === tab.id }"
+    (click)="setTab(tab.id)"
+  >
+    <span class="material-symbols-outlined"> {{ tab.icon }} </span>
+    <span>{{ tab.name }}</span>
+  </li>
+  }
+</ul>
+
+<div class="card">
+  @if (currentTabId === 'stats') {
+  <app-football-standing></app-football-standing>
+  } @if (currentTabId === 'history') {
+  <app-football-history></app-football-history>
+  }
+</div>

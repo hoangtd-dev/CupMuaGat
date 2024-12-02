@@ -1,0 +1,32 @@
+@import "../../../../styles/base/color/color";
+@import "../../../../styles/abstracts/variables";
+
+.league-information-title p {
+  font-size: 1.5rem;
+}
+
+.league-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+
+  .tab {
+    display: flex;
+    gap: 4px;
+    padding: 10px 20px;
+    font-weight: 300;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      color: $text-white;
+      background: linear-gradient(
+        146deg,
+        color(primary, 700) 0%,
+        color(primary, 600) 100%
+      );
+    }
+  }
+}

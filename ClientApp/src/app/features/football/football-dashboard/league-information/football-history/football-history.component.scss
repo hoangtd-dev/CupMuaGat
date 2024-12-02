@@ -1,0 +1,26 @@
+@import "../../../../../styles/abstracts/variables";
+
+.football-history-container {
+  padding: 10px;
+  .history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .home {
+    }
+
+    .score {
+      padding: 4px 20px;
+      border-radius: 56px;
+    }
+
+    .away {
+    }
+  }
+
+  .history-item:not(:last-child) {
+    border-bottom: 1px solid $gray;
+  }
+}
