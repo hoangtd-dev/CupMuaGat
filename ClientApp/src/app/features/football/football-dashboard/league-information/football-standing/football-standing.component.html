@@ -20,21 +20,11 @@
   </ng-container>
 
   <!-- Win Column -->
-  <ng-container matColumnDef="win">
-    <th mat-header-cell *matHeaderCellDef>Thắng</th>
-    <td mat-cell *matCellDef="let element">{{ element.win }}</td>
-  </ng-container>
-
-  <!-- Lose Column -->
-  <ng-container matColumnDef="lose">
-    <th mat-header-cell *matHeaderCellDef>Thua</th>
-    <td mat-cell *matCellDef="let element">{{ element.lose }}</td>
-  </ng-container>
-
-  <!-- Draw Column -->
-  <ng-container matColumnDef="draw">
-    <th mat-header-cell *matHeaderCellDef>Hoà</th>
-    <td mat-cell *matCellDef="let element">{{ element.draw }}</td>
+  <ng-container matColumnDef="win-draw-lose">
+    <th mat-header-cell *matHeaderCellDef>T/H/T</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.win }}/{{ element.draw }}/{{ element.lose }}
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

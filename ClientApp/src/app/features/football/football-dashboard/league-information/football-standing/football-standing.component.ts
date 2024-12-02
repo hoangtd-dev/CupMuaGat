@@ -13,13 +13,11 @@ export class FootballStandingComponent {
     'position',
     'team',
     'point',
-    'win',
-    'lose',
-    'draw',
+    'win-draw-lose',
   ];
 
   public dataSource = [
     { position: 1, team: 'Đội Trẻ', point: 6, win: 2, lose: 0, draw: 0 },
-    { position: 2, team: 'Đội Già', point: 6, win: 0, lose: 2, draw: 0 },
+    { position: 2, team: 'Đội Già', point: 0, win: 0, lose: 2, draw: 0 },
   ];
 }
