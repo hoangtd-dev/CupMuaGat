@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ThemesService } from '../../core/services/themes.service';
 import { BaseComponent } from '../../core/components/base-component/base-component.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -38,6 +39,12 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     this.isMenuOpen
       ? document.body.classList.add('menu-open')
       : document.body.classList.remove('menu-open');
+  }
+
+  public closeMenu(): void {
+    if (this.isMenuOpen) {
+      this.triggerMenu();
+    }
   }
 
   public updateTheme(): void {

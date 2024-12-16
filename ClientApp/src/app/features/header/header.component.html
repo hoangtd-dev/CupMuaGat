@@ -1,4 +1,4 @@
-<header class="w-100 p-20">
+<header class="w-100 p-20 header-container">
   <nav>
     <div class="icon-container" (click)="updateTheme()">
       @if (themeMode === ThemeModeEnum.Light) {
@@ -19,13 +19,19 @@
 
       <ul>
         <li>
-          <span class="material-symbols-outlined menu-icon"> trophy </span>
-          <a class="link" href="#">Cúp Mùa Gặt</a>
+          <span class="material-symbols-outlined menu-icon"> home </span>
+          <a class="link" routerLink="/home" (click)="closeMenu()">Trang chủ</a>
         </li>
         <li>
           <span class="material-symbols-outlined menu-icon"> trophy </span>
-          <a class="link" href="#">Giải Vòng Tròn</a>
+          <a class="link" routerLink="/football" (click)="closeMenu()"
+            >Cúp Mùa Gặt</a
+          >
         </li>
+        <!-- <li>
+          <span class="material-symbols-outlined menu-icon"> trophy </span>
+          <a class="link" href="#">Giải Vòng Tròn</a>
+        </li> -->
       </ul>
     </div>
 

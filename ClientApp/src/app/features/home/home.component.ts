@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { FootballDashboardComponent } from '../football/football-dashboard/football-dashboard.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FootballDashboardComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private readonly _router: Router) {}
+
+  public navigateToFootballPage(): void {
+    this._router.navigate(['/football']);
+  }
+}

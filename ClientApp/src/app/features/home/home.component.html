@@ -1,3 +1,24 @@
-<div class="container center pt-80">
-  <app-football-dashboard></app-football-dashboard>
+<div class="home-container">
+  <div class="home-title">
+    <h4>BÓNG ĐÁ HỘI THÁNH MÙA GẶT</h4>
+    <p>
+      Một sân chơi thể thao tổ chức vào mỗi cuối tuần, nhằm tạo cơ hội giao lưu,
+      rèn luyện sức khỏe và thúc đẩy tinh thần đoàn kết, đồng thời mang đến
+      những khoảnh khắc vui tươi và ý nghĩa cho cộng đồng.
+    </p>
+
+    <div (click)="navigateToFootballPage()" class="btn btn-stroked">
+      Khám phá thêm
+    </div>
+  </div>
+  <video
+    autoplay
+    loop
+    muted
+    oncanplay="this.play()"
+    onloadedmetadata="this.muted = true"
+    class="video-container"
+  >
+    <source src="assets/home-video.mp4" type="video/mp4" />
+  </video>
 </div>
