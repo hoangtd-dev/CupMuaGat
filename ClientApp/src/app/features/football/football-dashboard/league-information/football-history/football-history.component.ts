@@ -11,15 +11,19 @@ export class FootballHistoryComponent {
   public histories: any[] = [
     {
       home: 'Đội Trẻ',
+      homeLogo: 'assets/young-team.png',
       homeScore: 4,
       away: 'Đội Già',
       awayScore: 4,
+      awayLogo: 'assets/old-team.png',
     },
     {
       home: 'Đội Trẻ',
+      homeLogo: 'assets/young-team.png',
       homeScore: 4,
       away: 'Đội Già',
       awayScore: 4,
+      awayLogo: 'assets/old-team.png',
     },
   ];
 }

@@ -1,25 +1,32 @@
 <div class="home-container">
-  <div class="home-title">
-    <h4>BÓNG ĐÁ HỘI THÁNH MÙA GẶT</h4>
-    <p>
-      Một sân chơi thể thao tổ chức vào mỗi cuối tuần, nhằm tạo cơ hội giao lưu,
-      rèn luyện sức khỏe và thúc đẩy tinh thần đoàn kết, đồng thời mang đến
-      những khoảnh khắc vui tươi và ý nghĩa cho cộng đồng.
-    </p>
+  <div class="banner-background">
+    <img src="assets/football-club.jpg" />
+  </div>
 
-    <div (click)="navigateToFootballPage()" class="btn btn-stroked">
-      Khám phá thêm
+  <!-- INTRODUCTION -->
+  <div class="container center pt-20">
+    <div class="banner-content card mb-20 text-center">
+      <p class="title">Bóng Đá Hội Thánh Mùa Gặt</p>
+      <p class="content">
+        Một sân chơi thể thao tổ chức vào mỗi cuối tuần, nhằm tạo cơ hội giao
+        lưu, rèn luyện sức khỏe và thúc đẩy tinh thần đoàn kết, đồng thời mang
+        đến những khoảnh khắc vui tươi và ý nghĩa cho cộng đồng.
+      </p>
+
+      <div
+        (click)="navigateToFootballPage()"
+        class="btn bg-primary-600 mt-20 mb-20"
+      >
+        Khám phá thêm
+      </div>
     </div>
   </div>
-  <video
-    crossorigin
-    autoplay
-    loop
-    muted
-    oncanplay="this.play()"
-    onloadedmetadata="this.muted = true"
-    class="video-container"
-  >
-    <source src="assets/home-video.mp4" type="video/mp4" />
-  </video>
+  <!-- END INTRODUCTION -->
+
+  <div class="container center pt-20">
+    <h3 class="pb-20">Trận Đấu Gần Đây</h3>
+    <div class="banner-content card mb-20 text-center">
+      <app-football-history></app-football-history>
+    </div>
+  </div>
 </div>

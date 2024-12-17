@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FootballHistoryComponent } from '../football/football-dashboard/league-information/football-history/football-history.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [FootballHistoryComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

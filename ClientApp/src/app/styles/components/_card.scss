@@ -10,6 +10,11 @@
   border-radius: 16px;
 }
 
+.rounded-border {
+  border: 1px solid $gray;
+  border-radius: 16px;
+}
+
 .light-mode {
   .card {
     background-color: $text-white;
@@ -37,5 +42,9 @@
     .mat-mdc-header-cell {
       color: $dark_bg_text;
     }
+  }
+
+  .rounded-border {
+    border-color: $dark_surface_2;
   }
 }

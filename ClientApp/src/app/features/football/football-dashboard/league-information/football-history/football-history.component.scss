@@ -6,21 +6,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px;
 
-    .home {
+    .team {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     .score {
       padding: 4px 20px;
       border-radius: 56px;
     }
-
-    .away {
-    }
   }
 
   .history-item:not(:last-child) {
-    border-bottom: 1px solid $gray;
+    margin-bottom: 20px;
   }
 }
