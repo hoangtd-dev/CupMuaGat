@@ -58,7 +58,7 @@ $width_dimension: (
 
 // container
 .container {
-  width: 90%;
+  width: 95%;
   max-width: 768px;
 
   &.center {
@@ -112,5 +112,11 @@ $paddings_and_margins: (0, 4, 8, 16, 20, 32, 80, 100);
 
   .mr-#{$size} {
     margin-right: #{$size}px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
   }
 }
