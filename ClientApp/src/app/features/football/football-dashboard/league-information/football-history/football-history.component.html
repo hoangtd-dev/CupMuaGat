@@ -1,25 +1,5 @@
 <div class="football-history-container">
-  @for (history of histories; track $index) {
-  <div class="history-item rounded-border">
-    <div class="team">
-      <div class="logo">
-        <img [src]="history.homeLogo" />
-      </div>
-      <div class="name">
-        {{ history.home }}
-      </div>
-    </div>
-    <div class="score sub-card">
-      {{ history.homeScore }} : {{ history.awayScore }}
-    </div>
-    <div class="team">
-      <div class="logo">
-        <img [src]="history.awayLogo" />
-      </div>
-      <div class="name">
-        {{ history.away }}
-      </div>
-    </div>
-  </div>
+  @for (match of matches; track $index) {
+  <app-match-card [match]="match"></app-match-card>
   }
 </div>

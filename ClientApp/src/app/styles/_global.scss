@@ -66,6 +66,10 @@ $width_dimension: (
   }
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 // padding
 $paddings_and_margins: (0, 4, 8, 16, 20, 32, 80, 100);
 

@@ -13,6 +13,6 @@ export class HomeComponent {
   constructor(private readonly _router: Router) {}
 
   public navigateToFootballPage(): void {
-    this._router.navigate(['/football']);
+    this._router.navigate(['/football/leagues/1']);
   }
 }

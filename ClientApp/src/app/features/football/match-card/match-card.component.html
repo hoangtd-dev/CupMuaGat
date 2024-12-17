@@ -1,0 +1,47 @@
+<div
+  class="rounded-border p-20"
+  [class]="{ 'cursor-pointer': !isDetail }"
+  (click)="navigateToDetail(match.id)"
+>
+  <div class="match-item">
+    <div class="team">
+      <div class="logo">
+        <img [src]="match.homeLogo" />
+      </div>
+      <div class="name">
+        {{ match.home }}
+      </div>
+    </div>
+    <div class="score">
+      <p class="score-point">{{ match.homeScore }}</p>
+      <p>vs</p>
+      <p class="score-point">{{ match.awayScore }}</p>
+    </div>
+    <div class="team">
+      <div class="logo">
+        <img [src]="match.awayLogo" />
+      </div>
+      <div class="name">
+        {{ match.away }}
+      </div>
+    </div>
+  </div>
+
+  <div class="match-event">
+    <div class="text-left">
+      @for (player of homePlayers; track $index) {
+      <p>{{ player.username }} {{ player.goalInText }}</p>
+      }
+    </div>
+    <div>
+      @for (_ of [].constructor(maxEventLength); track $index) {
+      <p class="ml-8 mr-8"><span class="material-symbols-outlined"> sports_soccer </span></p>
+      }
+    </div>
+    <div class="text-right">
+      @for (player of awayPlayers; track $index) {
+      <p>{{ player.username }} {{ player.goalInText }}</p>
+      }
+    </div>
+  </div>
+</div>

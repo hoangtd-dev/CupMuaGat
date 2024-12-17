@@ -1,0 +1,24 @@
+<div class="container center pt-20">
+  <div class="card mb-20 text-center">
+    <app-match-card [match]="match" [isDetail]="true"></app-match-card>
+  </div>
+
+  <ul class="match-tabs">
+    @for (tab of tabs; track $index) {
+    <li
+      class="tab"
+      [ngClass]="{ active: currentTabId === tab.id }"
+      (click)="setTab(tab.id)"
+    >
+      <span class="material-symbols-outlined"> {{ tab.icon }} </span>
+      <span>{{ tab.name }}</span>
+    </li>
+    }
+  </ul>
+
+  <div class="card mb-20">
+    @if (currentTabId === 'lineup') {
+    <app-football-lineup></app-football-lineup>
+    }
+  </div>
+</div>

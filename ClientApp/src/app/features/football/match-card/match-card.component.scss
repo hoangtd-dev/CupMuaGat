@@ -1,0 +1,38 @@
+.match-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .score {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+
+    .score-point {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.match-event {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+}

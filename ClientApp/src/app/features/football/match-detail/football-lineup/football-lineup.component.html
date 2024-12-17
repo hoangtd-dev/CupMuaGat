@@ -1,0 +1,55 @@
+<div class="lineup-container">
+  <img src="/assets/football-field.png" alt="" />
+
+  <!-- HOME -->
+  <div class="line-wrapper home-gk">
+    <div class="line-wrapper-item">
+      <div class="player-point home-point"></div>
+      <p class="lineup-name">{{ homeLineup.gk.name }}</p>
+    </div>
+  </div>
+
+  <div class="line-wrapper home-df">
+    @for (df of homeLineup.df; track $index) {
+    <div class="line-wrapper-item">
+      <div class="player-point home-point"></div>
+      <p class="lineup-name">{{ df.name }}</p>
+    </div>
+    }
+  </div>
+
+  <div class="line-wrapper home-st">
+    @for (st of homeLineup.st; track $index) {
+    <div class="line-wrapper-item">
+      <div class="player-point home-point"></div>
+      <p class="lineup-name">{{ st.name }}</p>
+    </div>
+    }
+  </div>
+
+  <!-- AWAY -->
+  <div class="line-wrapper away-gk">
+    <div class="line-wrapper-item">
+      <div class="player-point away-point"></div>
+      <p class="lineup-name">{{ awayLineup.gk.name }}</p>
+    </div>
+  </div>
+
+  <div class="line-wrapper away-df">
+    @for (df of awayLineup.df; track $index) {
+    <div class="line-wrapper-item">
+      <div class="player-point away-point"></div>
+      <p class="lineup-name">{{ df.name }}</p>
+    </div>
+    }
+  </div>
+
+  <div class="line-wrapper away-st">
+    @for (st of awayLineup.st; track $index) {
+    <div class="line-wrapper-item">
+      <div class="player-point away-point"></div>
+      <p class="lineup-name">{{ st.name }}</p>
+    </div>
+    }
+  </div>
+</div>

@@ -2,31 +2,7 @@
 
 .football-history-container {
   padding: 10px;
-  .history-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-
-    .team {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .logo img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    .score {
-      padding: 4px 20px;
-      border-radius: 56px;
-    }
-  }
-
-  .history-item:not(:last-child) {
-    margin-bottom: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
