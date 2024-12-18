@@ -1,8 +1,12 @@
+import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatchCardComponent } from '../match-card/match-card.component';
 import { MatchEventEnum } from '../enums/match-event.enum';
 import { FootballLineupComponent } from './football-lineup/football-lineup.component';
+import { MatchViewModel } from '../models/view-model/match.view-model';
+import { MatchService } from '../services/match.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-match-detail',
@@ -12,54 +16,9 @@ import { FootballLineupComponent } from './football-lineup/football-lineup.compo
   styleUrl: './match-detail.component.scss',
 })
 export class MatchDetailComponent implements OnInit {
-  public match: any = {
-    id: 1,
-    homeId: 1,
-    home: 'Đội Trẻ',
-    homeLogo: 'assets/young-team.png',
-    homeScore: 4,
-    awayId: 2,
-    away: 'Đội Già',
-    awayScore: 4,
-    awayLogo: 'assets/old-team.png',
-    matchEvents: [
-      {
-        id: 1,
-        eventType: MatchEventEnum.Goal,
-        teamId: 1,
-        user: { id: 1, name: 'Hoang Tran' },
-        time: Math.floor(Math.random() * 90),
-      },
-      {
-        id: 2,
-        eventType: MatchEventEnum.Goal,
-        teamId: 1,
-        user: { id: 1, name: 'Hoang Tran' },
-        time: Math.floor(Math.random() * 90),
-      },
-      {
-        id: 3,
-        eventType: MatchEventEnum.Goal,
-        teamId: 1,
-        user: { id: 2, name: 'Trong Vu' },
-        time: Math.floor(Math.random() * 90),
-      },
-      {
-        id: 4,
-        eventType: MatchEventEnum.Goal,
-        teamId: 2,
-        user: { id: 3, name: 'Danh Nay' },
-        time: Math.floor(Math.random() * 90),
-      },
-      {
-        id: 5,
-        eventType: MatchEventEnum.Goal,
-        teamId: 2,
-        user: { id: 3, name: 'Danh Nay' },
-        time: Math.floor(Math.random() * 90),
-      },
-    ],
-  };
+  private _matchId!: number;
+
+  public match$!: Observable<MatchViewModel | undefined>;
 
   public readonly tabs: any[] = [
     {
@@ -70,11 +29,21 @@ export class MatchDetailComponent implements OnInit {
   ];
   public currentTabId!: string;
 
-  constructor() {
+  constructor(
+    private readonly _activatedRoute: ActivatedRoute,
+    private readonly _matchService: MatchService
+  ) {
     this.currentTabId = this.tabs[0].id;
+    this._matchId = Number(_activatedRoute.snapshot.params['matchId']);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._getMatch();
+  }
+
+  private _getMatch(): void {
+    this.match$ = this._matchService.getMatchById(this._matchId);
+  }
 
   public setTab(tabId: string): void {
     if (this.currentTabId === tabId) return;

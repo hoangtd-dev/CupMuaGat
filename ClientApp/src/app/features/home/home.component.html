@@ -23,10 +23,10 @@
   </div>
   <!-- END INTRODUCTION -->
 
-  <div class="container center pt-20">
+  <div class="container center pt-20" *ngIf="match$ | async as matchData">
     <h3 class="pb-20">Trận Đấu Gần Đây</h3>
     <div class="banner-content card mb-20 text-center">
-      <app-football-history></app-football-history>
+      <app-match-card [match]="matchData"></app-match-card>
     </div>
   </div>
 </div>

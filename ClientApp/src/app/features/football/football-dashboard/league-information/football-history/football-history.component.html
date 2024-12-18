@@ -1,5 +1,5 @@
 <div class="football-history-container">
-  @for (match of matches; track $index) {
+  @for (match of (matches$ | async); track $index) {
   <app-match-card [match]="match"></app-match-card>
   }
 </div>

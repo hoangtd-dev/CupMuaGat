@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LineupViewModel, MatchViewModel } from '../../models/view-model/match.view-model';
 
 @Component({
   selector: 'app-football-lineup',
@@ -9,15 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './football-lineup.component.scss',
 })
 export class FootballLineupComponent {
-  public homeLineup: any = {
-    gk: { name: 'Hoang Tran' },
-    df: [{ name: 'Trong Vu' }, { name: 'Tommy Siu' }],
-    st: [{ name: 'Khang' }, { name: 'Ksor Duc' }],
-  };
-
-  public awayLineup: any = {
-    gk: { name: 'Nay Danh' },
-    df: [{ name: 'Trong Thai' }, { name: 'Hien Tao' }],
-    st: [{ name: 'Binzema' }, { name: 'Chinese' }],
-  };
+  @Input() match!: MatchViewModel;
 }

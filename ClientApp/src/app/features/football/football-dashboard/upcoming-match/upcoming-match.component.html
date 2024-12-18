@@ -1,25 +1,8 @@
 <div class="upcoming-match-title">
   <p>Trận đấu sắp diễn ra</p>
-</div>
-<div class="upcoming-match-container rounded-lg p-32">
-  <p class="title">{{ match.home }} Vs {{ match.away }}</p>
-  <div class="info">
-    <span class="material-symbols-outlined"> calendar_today </span>
-    <p>
-      {{ match.date }}
-    </p>
+  @for (match of matches$ | async; track $index) {
+  <div class="banner-content card mb-20 text-center">
+    <app-match-card [match]="match"></app-match-card>
   </div>
-  <div class="info">
-    <span class="material-symbols-outlined"> location_on </span>
-    <p class="info">
-      {{ match.location }}
-    </p>
-  </div>
-  <div class="mt-32">
-    <a class="btn btn-stroked detail-btn"
-      >Xem chi tiết
-
-      <span class="btn-icon material-symbols-outlined"> arrow_forward </span>
-    </a>
-  </div>
+  }
 </div>

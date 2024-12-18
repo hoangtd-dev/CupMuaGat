@@ -1,4 +1,4 @@
-<div class="container center pt-20">
+<div class="container center pt-20" *ngIf="match$ | async as match">
   <div class="card mb-20 text-center">
     <app-match-card [match]="match" [isDetail]="true"></app-match-card>
   </div>
@@ -18,7 +18,7 @@
 
   <div class="card mb-20">
     @if (currentTabId === 'lineup') {
-    <app-football-lineup></app-football-lineup>
+    <app-football-lineup [match]="match"></app-football-lineup>
     }
   </div>
 </div>

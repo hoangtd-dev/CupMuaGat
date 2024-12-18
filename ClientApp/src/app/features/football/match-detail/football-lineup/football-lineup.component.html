@@ -5,12 +5,12 @@
   <div class="line-wrapper home-gk">
     <div class="line-wrapper-item">
       <div class="player-point home-point"></div>
-      <p class="lineup-name">{{ homeLineup.gk.name }}</p>
+      <p class="lineup-name">{{ match.lineup?.homeGk?.name }}</p>
     </div>
   </div>
 
   <div class="line-wrapper home-df">
-    @for (df of homeLineup.df; track $index) {
+    @for (df of match.lineup?.homeDfs; track $index) {
     <div class="line-wrapper-item">
       <div class="player-point home-point"></div>
       <p class="lineup-name">{{ df.name }}</p>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="line-wrapper home-st">
-    @for (st of homeLineup.st; track $index) {
+    @for (st of match.lineup?.homeSts; track $index) {
     <div class="line-wrapper-item">
       <div class="player-point home-point"></div>
       <p class="lineup-name">{{ st.name }}</p>
@@ -31,12 +31,12 @@
   <div class="line-wrapper away-gk">
     <div class="line-wrapper-item">
       <div class="player-point away-point"></div>
-      <p class="lineup-name">{{ awayLineup.gk.name }}</p>
+      <p class="lineup-name">{{ match.lineup?.awayGk?.name }}</p>
     </div>
   </div>
 
   <div class="line-wrapper away-df">
-    @for (df of awayLineup.df; track $index) {
+    @for (df of match.lineup?.awayDfs; track $index) {
     <div class="line-wrapper-item">
       <div class="player-point away-point"></div>
       <p class="lineup-name">{{ df.name }}</p>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="line-wrapper away-st">
-    @for (st of awayLineup.st; track $index) {
+    @for (st of match.lineup?.awaySts; track $index) {
     <div class="line-wrapper-item">
       <div class="player-point away-point"></div>
       <p class="lineup-name">{{ st.name }}</p>
