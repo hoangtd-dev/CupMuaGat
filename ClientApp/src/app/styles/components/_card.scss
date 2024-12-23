@@ -1,4 +1,4 @@
-@import "../abstracts/variables";
+@import "variables";
 
 @mixin override_card($padding, $border-radius) {
   padding: $padding;
