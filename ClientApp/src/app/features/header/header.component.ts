@@ -1,9 +1,11 @@
-import { ThemeModeEnum } from './../../core/enums/themes.enum';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ThemesService } from '../../core/services/themes.service';
-import { BaseComponent } from '../../core/components/base-component/base-component.component';
 import { RouterLink } from '@angular/router';
+
+import { BaseComponent } from '../../core/components/base-component/base-component.component';
+
+import { ThemeModeEnum } from '@enum/themes.enum';
+import { ThemesService } from '@service/themes.service';
 
 @Component({
   selector: 'app-header',

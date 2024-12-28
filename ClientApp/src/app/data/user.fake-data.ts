@@ -1,4 +1,4 @@
-import { User } from '../core/models/api/user.model';
+import { User } from '@model/api/index';
 
 export const userData: User[] = [
   {
@@ -40,5 +40,13 @@ export const userData: User[] = [
   {
     id: 10,
     name: 'Ksor Duc',
+  },
+  {
+    id: 11,
+    name: 'Nam',
+  },
+  {
+    id: 12,
+    name: 'Xuan (Son)',
   },
 ];

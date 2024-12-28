@@ -1,6 +1,5 @@
-import { MatchEventEnum } from '../features/football/enums/match-event.enum';
-import { MatchStatusEnum } from '../features/football/enums/match-status.enum';
-import { Match, MatchEvent } from '../features/football/models/api/match.model';
+import { MatchEventEnum, MatchStatusEnum } from '@enum/football';
+import { Match, MatchEvent } from '@model/api/football';
 
 export const matchData: Match[] = [
   {
@@ -355,11 +354,69 @@ export const matchData: Match[] = [
     id: 7,
     leagueId: 1,
     homeId: 1,
+    homeScore: 3,
+    awayId: 2,
+    awayScore: 3,
+    status: MatchStatusEnum.Completed,
+    date: new Date(2024, 11, 22, 17, 0, 0),
+    location: 'Sân bóng Matheson',
+    matchEvents: [
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 1,
+        userId: 1,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 1,
+        userId: 4,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 1,
+        userId: 3,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 2,
+        userId: 8,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 2,
+        userId: 8,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+      {
+        eventType: MatchEventEnum.Goal,
+        teamId: 2,
+        userId: 5,
+        time: Math.floor(Math.random() * 90) + 1,
+      },
+    ] as MatchEvent[],
+    lineup: {
+      homeGkId: 1,
+      homeDfIds: [2, 3],
+      homeStIds: [4, 11],
+      awayGkId: 5,
+      awayDfIds: [10, 12],
+      awayStIds: [6, 7],
+      awaySubstituteIds: [8],
+    },
+  },
+  {
+    id: 8,
+    leagueId: 1,
+    homeId: 1,
     homeScore: 0,
     awayId: 2,
     awayScore: 0,
     status: MatchStatusEnum.NotStart,
-    date: new Date(2024, 11, 22, 17, 0, 0),
+    date: new Date(2024, 11, 29, 17, 0, 0),
     location: 'Sân bóng Matheson',
     matchEvents: [] as MatchEvent[],
     lineup: {

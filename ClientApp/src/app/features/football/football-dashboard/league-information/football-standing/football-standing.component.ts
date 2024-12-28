@@ -1,9 +1,9 @@
 import { MatTableModule } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
-import { MatchService } from '../../../services/match.service';
-import { TeamService } from '../../../services/team.service';
 import { ActivatedRoute } from '@angular/router';
-import { StandingViewModel } from '../../../models/view-model/standing.view-model';
+
+import { StandingViewModel } from '@model/view/football';
+import { MatchService, TeamService } from '@service/api/football';
 
 @Component({
   selector: 'app-football-standing',

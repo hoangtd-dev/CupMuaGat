@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatchService } from '../football/services/match.service';
 import { Observable } from 'rxjs';
-import { MatchViewModel } from '../football/models/view-model/match.view-model';
 import { CommonModule } from '@angular/common';
+
 import { MatchCardComponent } from '../football/match-card/match-card.component';
+
+import { MatchViewModel } from '@model/view/football';
+import { MatchService } from '@service/api/football';
 
 @Component({
   selector: 'app-home',

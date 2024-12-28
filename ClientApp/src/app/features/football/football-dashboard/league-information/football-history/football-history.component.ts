@@ -1,10 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MatchCardComponent } from '../../../match-card/match-card.component';
-import { MatchViewModel } from '../../../models/view-model/match.view-model';
 import { Observable } from 'rxjs';
-import { MatchService } from '../../../services/match.service';
 import { ActivatedRoute } from '@angular/router';
+
+import { MatchCardComponent } from '../../../match-card/match-card.component';
+
+import { MatchViewModel } from '@model/view/football';
+import { MatchService } from '@service/api/football';
+
 
 @Component({
   selector: 'app-football-history',

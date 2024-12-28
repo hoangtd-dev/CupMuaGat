@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LineupViewModel, MatchViewModel } from '../../models/view-model/match.view-model';
+import { MatchViewModel } from '@model/view/football';
 
 @Component({
   selector: 'app-football-lineup',

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '../../../core/services/base/base-service.service';
 import { Observable, of } from 'rxjs';
+import { matchData } from '@fake-data';
+
+import { MatchStatusEnum } from '@enum/football';
+import { MatchEvent } from '@model/api/football';
 import {
-  LineupViewModel,
-  MatchEventViewModel,
   MatchViewModel,
-} from '../models/view-model/match.view-model';
-import { matchData } from '../../../data/match.fake-data';
-import { MatchStatusEnum } from '../enums/match-status.enum';
+  MatchEventViewModel,
+  LineupViewModel,
+} from '@model/view/football';
+import { BaseService } from '@service/base';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +27,7 @@ export class MatchService extends BaseService {
           new MatchViewModel({
             ...match,
             matchEvents: match.matchEvents?.map(
-              (e) => new MatchEventViewModel(e)
+              (e: MatchEvent) => new MatchEventViewModel(e)
             ),
             lineup: match.lineup ? new LineupViewModel(match.lineup) : {},
           })
@@ -47,7 +49,7 @@ export class MatchService extends BaseService {
           new MatchViewModel({
             ...match,
             matchEvents: match.matchEvents?.map(
-              (e) => new MatchEventViewModel(e)
+              (e: MatchEvent) => new MatchEventViewModel(e)
             ),
             lineup: match.lineup ? new LineupViewModel(match.lineup) : {},
           })
@@ -69,7 +71,7 @@ export class MatchService extends BaseService {
           new MatchViewModel({
             ...match,
             matchEvents: match.matchEvents?.map(
-              (e) => new MatchEventViewModel(e)
+              (e: MatchEvent) => new MatchEventViewModel(e)
             ),
             lineup: match.lineup ? new LineupViewModel(match.lineup) : {},
           })
@@ -83,7 +85,7 @@ export class MatchService extends BaseService {
       ? new MatchViewModel({
           ...match,
           matchEvents: match.matchEvents?.map(
-            (e) => new MatchEventViewModel(e)
+            (e: MatchEvent) => new MatchEventViewModel(e)
           ),
           lineup: match.lineup ? new LineupViewModel(match.lineup) : {},
         })
@@ -111,7 +113,7 @@ export class MatchService extends BaseService {
       ? new MatchViewModel({
           ...latestMatch,
           matchEvents: latestMatch.matchEvents?.map(
-            (e) => new MatchEventViewModel(e)
+            (e: MatchEvent) => new MatchEventViewModel(e)
           ),
           lineup: latestMatch.lineup
             ? new LineupViewModel(latestMatch.lineup)

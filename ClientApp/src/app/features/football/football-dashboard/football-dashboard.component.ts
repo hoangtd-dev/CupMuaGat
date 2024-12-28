@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { UpcomingMatchComponent } from './upcoming-match/upcoming-match.component';
-import { LeagueInformationComponent } from './league-information/league-information.component';
-import { LeagueViewModel } from '../models/view-model/league.view-model';
 import { Observable } from 'rxjs';
-import { LeagueService } from '../services/league.service';
-import { BaseComponent } from '../../../core/components/base-component/base-component.component';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+
+import { UpcomingMatchComponent } from './upcoming-match/upcoming-match.component';
+import { LeagueInformationComponent } from './league-information/league-information.component';
+import { BaseComponent } from 'src/app/core/components/base-component/base-component.component';
+
+import { LeagueViewModel } from '@model/view/football';
+import { LeagueService } from '@service/api/football';
 
 @Component({
   selector: 'app-football-dashboard',

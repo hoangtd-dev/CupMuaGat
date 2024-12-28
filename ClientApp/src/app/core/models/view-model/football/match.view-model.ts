@@ -1,7 +1,7 @@
-import { UserViewModel } from '../../../../core/models/view-model/user.view-model';
-import { MatchEventEnum } from '../../enums/match-event.enum';
-import { MatchStatusEnum } from '../../enums/match-status.enum';
+import { UserViewModel } from '../user.view-model';
 import { TeamViewModel } from './team.view-model';
+
+import { MatchEventEnum, MatchStatusEnum } from '@enum/football';
 
 export class MatchViewModel {
   public id!: number;
