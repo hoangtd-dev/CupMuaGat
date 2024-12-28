@@ -1,4 +1,4 @@
-import { Team } from '../features/football/models/api/team.model';
+import { Team } from '@model/api/football';
 
 export const teamData: Team[] = [
   {

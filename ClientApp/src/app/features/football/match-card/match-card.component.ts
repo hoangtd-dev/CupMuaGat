@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatchEventEnum } from '../enums/match-event.enum';
-import { MatchViewModel } from '../models/view-model/match.view-model';
 import { forkJoin } from 'rxjs';
-import { TeamService } from '../services/team.service';
-import { UserService } from '../../../core/services/api/user.service';
-import { UserViewModel } from '../../../core/models/view-model/user.view-model';
 import { CommonModule } from '@angular/common';
-import { MatchStatusEnum } from '../enums/match-status.enum';
+
+import { MatchStatusEnum, MatchEventEnum } from '@enum/football';
+import { MatchViewModel } from '@model/view/football';
+import { UserViewModel } from '@model/view/user.view-model';
+import { TeamService } from '@service/api/football';
+import { UserService } from '@service/index';
 
 @Component({
   selector: 'app-match-card',

@@ -1,5 +1,4 @@
-import { MatchEventEnum } from '../../enums/match-event.enum';
-import { MatchStatusEnum } from '../../enums/match-status.enum';
+import { MatchEventEnum, MatchStatusEnum } from '@enum/football';
 
 export class Match {
   public id!: number;

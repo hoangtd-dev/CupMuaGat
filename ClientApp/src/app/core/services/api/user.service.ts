@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '../base/base-service.service';
 import { Observable, of } from 'rxjs';
-import { UserViewModel } from '../../models/view-model/user.view-model';
-import { userData } from '../../../data/user.fake-data';
+
+import { userData } from '@fake-data';
+
+import { BaseService } from '@service/base';
+import { UserViewModel } from '@model/view/user.view-model';
 
 @Injectable({
   providedIn: 'root',

@@ -17,12 +17,22 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": ["ES2022", "dom"]
+    "lib": ["ES2022", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@fake-data": ["src/app/data/index.ts"],
+      "@model/api/*": ["src/app/core/models/api/*"],
+      "@model/view/*": ["src/app/core/models/view-model/*"],
+      "@service/*": ["src/app/core/services/*"],
+      "@enum/*": ["src/app/core/enums/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
+    "enableResourceInlining": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictStandalone": true
   }
 }

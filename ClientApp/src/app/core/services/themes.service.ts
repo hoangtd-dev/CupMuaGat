@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BaseContextService } from './base/base-context.service';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { ThemeEnum, ThemeModeEnum } from '../enums/themes.enum';
+
+import { ThemeEnum, ThemeModeEnum } from '@enum/themes.enum';
+import { BaseContextService } from './base';
 
 @Injectable({
   providedIn: 'root',

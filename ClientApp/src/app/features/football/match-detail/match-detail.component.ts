@@ -1,12 +1,13 @@
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
-import { MatchCardComponent } from '../match-card/match-card.component';
-import { MatchEventEnum } from '../enums/match-event.enum';
-import { FootballLineupComponent } from './football-lineup/football-lineup.component';
-import { MatchViewModel } from '../models/view-model/match.view-model';
-import { MatchService } from '../services/match.service';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { MatchCardComponent } from '../match-card/match-card.component';
+import { FootballLineupComponent } from './football-lineup/football-lineup.component';
+
+import { MatchViewModel } from '@model/view/football';
+import { MatchService } from '@service/api/football';
 
 @Component({
   selector: 'app-match-detail',

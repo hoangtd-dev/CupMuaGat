@@ -1,4 +1,4 @@
-import { League } from '../features/football/models/api/league.model';
+import { League } from '@model/api/football';
 
 export const leagueData: League[] = [
   {

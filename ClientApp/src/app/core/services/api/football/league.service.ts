@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '../../../core/services/base/base-service.service';
 import { Observable, of } from 'rxjs';
-import { LeagueViewModel } from '../models/view-model/league.view-model';
-import { leagueData } from '../../../data/league.fake-data';
+
+import { leagueData } from '@fake-data';
+
+import { LeagueViewModel } from '@model/view/football';
+import { BaseService } from '@service/base';
 
 @Injectable({
   providedIn: 'root',
